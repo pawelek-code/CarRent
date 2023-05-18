@@ -7,7 +7,7 @@ public class PetrolCar extends Vehicle {
     public PetrolCar(String brand, String model, String plates, int prodYear, int power, int kmLimit, int engCapacity, int fuelPercent) {
         super(brand, model, plates, prodYear, power, kmLimit);
         this.engCapacity = engCapacity;
-        this.fuelPrecent=fuelPercent;
+        this.fuelPrecent= fuelPercent;
     }
     PetrolCar()
     {
@@ -17,7 +17,13 @@ public class PetrolCar extends Vehicle {
     @Override
     public String toString() {
         return "PetrolCar{" +
-                "engCapacity=" + engCapacity +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", plates='" + plates + '\'' +
+                ", prodYear=" + prodYear +
+                ", power=" + power +
+                ", kmLimit=" + kmLimit +
+                ", engCapacity=" + engCapacity +
                 ", fuelPrecent=" + fuelPrecent +
                 '}';
     }

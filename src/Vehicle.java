@@ -2,12 +2,12 @@ import java.util.Objects;
 
 public class Vehicle {
 
-        private String brand;
-        private String model;
-        private String plates;
-        private int prodYear;
-        private int power;
-        private int kmLimit;
+        protected String brand;
+        protected String model;
+        protected String plates;
+        protected int prodYear;
+        protected int power;
+        protected int kmLimit;
 
         Vehicle()
         {

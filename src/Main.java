@@ -10,7 +10,12 @@ public class Main {
         PetrolCar honda2 = new PetrolCar("Honda", "civic","SPI11424",2004,90,2000 ,1400,60);
 
         System.out.println(honda.equals(honda2));
+            CarRent januszex = new CarRent();
+            PetrolCar ford = new PetrolCar("Ford", "Focus","SPI21808",2012,150,2000,1600,30 );
+        System.out.println(ford);
+        januszex.addCar(ford);
+        januszex.addCar(honda);
+    }
 
-        }
 
     }

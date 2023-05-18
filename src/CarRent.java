@@ -11,4 +11,17 @@ public class CarRent {
   {
       vehicles.add(vehicle);
   }
+  public void rentaCar(Vehicle vehicle)
+  {
+      vehicle.setAvailability(false);
+  }
+  public void deleteCar(Vehicle vehicle)
+  {
+      vehicle.brand=null;
+      vehicle.model=null;
+      vehicle.plates=null;
+      vehicle.prodYear=0;
+      vehicle.power=0;
+      vehicle.kmLimit=0;
+  }
 }

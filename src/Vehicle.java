@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public abstract class Vehicle {
-
+        public boolean availability;
         protected String brand;
         protected String model;
         protected String plates;
@@ -21,9 +21,12 @@ public abstract class Vehicle {
             this.prodYear=prodYear;
             this.power=power;
             this.kmLimit=kmLimit;
+            availability=true;
         }
 
-
+    public void setAvailability(boolean availability) {
+        this.availability = availability;
+    }
 
     public String getBrand() {
         return brand;

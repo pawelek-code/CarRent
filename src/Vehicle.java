@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Vehicle {
+public abstract class Vehicle {
 
         protected String brand;
         protected String model;
@@ -23,17 +23,7 @@ public class Vehicle {
             this.kmLimit=kmLimit;
         }
 
-    @Override
-    public String toString() {
-        return "Vehicle{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", plates='" + plates + '\'' +
-                ", prodYear=" + prodYear +
-                ", power=" + power +
-                ", kmLimit=" + kmLimit +
-                '}';
-    }
+
 
     public String getBrand() {
         return brand;

@@ -141,6 +141,7 @@ public class Main {
                     break;
                 case 5:
                     januszex.printAvaibleCars();
+                    break;
                 case 6:
                     running=false;
                     break;

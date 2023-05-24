@@ -4,13 +4,10 @@ public class Main {
     public static void main(String[] args) {
 
         PetrolCar honda = new PetrolCar("Honda", "civic", "SPI11424", 2005, 90, 2000, 1400, 60);
-        System.out.println(honda);
-        PetrolCar honda2 = new PetrolCar("Honda", "civic", "SPI11424", 2005, 90, 2000, 1400, 60);
 
-        System.out.println(honda.equals(honda2));
         CarRent januszex = new CarRent();
         PetrolCar ford = new PetrolCar("Ford", "Focus", "SPI21808", 2012, 150, 2000, 1600, 30);
-        System.out.println(ford);
+
         januszex.addCar(ford);
         januszex.addCar(honda);
         Scanner scanner = new Scanner(System.in);
@@ -20,7 +17,9 @@ public class Main {
                 "1. Add new petrol car\n" +
                 "2.  Add new electric car\n" +
                 "3.  Add new Motorbike\n" +
-                "4. Close the program");
+                "4.  Show all cars\n" +
+                "5. Show all cars avaible\n"+
+                "6. Close the program");
         int tmp = scanner.nextInt();
 
 
@@ -29,11 +28,12 @@ public class Main {
                     PetrolCar petrolCar = new PetrolCar();
                     System.out.println("add engine capacity");
                     int tmpEngCap = scanner.nextInt();
+                    scanner.nextLine();
                     petrolCar.setEngCapacity(tmpEngCap);
 
                     System.out.println("choose brand");
                     String branTemp = scanner.nextLine();
-                    scanner.nextLine();
+
                     petrolCar.setBrand(branTemp);
 
                     System.out.println("choose model");
@@ -48,12 +48,12 @@ public class Main {
 
                     System.out.println(" power");
                     int powTemp = scanner.nextInt();
-
+                    scanner.nextLine();
                     petrolCar.setPower(powTemp);
 
                     System.out.println("plates number");
                     String plaTemp = scanner.nextLine();
-                    scanner.nextLine();
+
                     petrolCar.setPlates(plaTemp);
 
                     System.out.println("choose kmlimit");
@@ -71,24 +71,30 @@ public class Main {
                     ElectricCar electricCar = new ElectricCar();
                     System.out.println("battery lvl");
                     int tmpBatlvl = scanner.nextInt();
+                    scanner.nextLine();
                     electricCar.setBatteryLvl(tmpBatlvl);
+
                     System.out.println("choose brand");
                     String bran1Temp = scanner.nextLine();
-                    scanner.nextLine();
                     electricCar.setBrand(bran1Temp);
+
                     System.out.println("choose model");
                     String model1temp = scanner.nextLine();
                     electricCar.setModel(model1temp);
+
                     System.out.println("add Production year");
                     int prod1Temp = scanner.nextInt();
                     electricCar.setProdYear(prod1Temp);
+
                     System.out.println(" power");
                     int pow1Temp = scanner.nextInt();
+                    scanner.nextLine();
                     electricCar.setPower(pow1Temp);
+
                     System.out.println("plates number");
                     String pla1Temp = scanner.nextLine();
-                    scanner.nextLine();
                     electricCar.setPlates(pla1Temp);
+
                     System.out.println("choose kmlimit");
                     int lim1Temp = scanner.nextInt();
                     electricCar.setKmLimit(lim1Temp);
@@ -96,38 +102,51 @@ public class Main {
                     break;
                 case 3:
                     Motorbike motorbike = new Motorbike();
+                    System.out.println("add Production year");
+                    int prod2Temp = scanner.nextInt();
+                    scanner.nextLine();
+                    motorbike.setProdYear(prod2Temp);
+
                     System.out.println("choose brand");
                     String bran2Temp = scanner.nextLine();
-                    scanner.nextLine();
                     motorbike.setBrand(bran2Temp);
+
                     System.out.println("choose model");
                     String model2temp = scanner.nextLine();
                     motorbike.setModel(model2temp);
-                    System.out.println("add Production year");
-                    int prod2Temp = scanner.nextInt();
 
-                    motorbike.setProdYear(prod2Temp);
+
+
                     System.out.println(" power");
                     int pow2Temp = scanner.nextInt();
+                    scanner.nextLine();
                     motorbike.setPower(pow2Temp);
+
                     System.out.println("plates number");
                     String pla2Temp = scanner.nextLine();
-                    scanner.nextLine();
                     motorbike.setPlates(pla2Temp);
+
                     System.out.println("choose kmlimit");
                     int lim2Temp = scanner.nextInt();
+                    scanner.nextLine();
                     motorbike.setKmLimit(lim2Temp);
+
                     System.out.println("Motor type");
                     String typTemp = scanner.nextLine();
                     motorbike.setType(typTemp);
                     januszex.addCar(motorbike);
                     break;
-
                 case 4:
+             januszex.printAllCarsFrom();
+                    break;
+                case 5:
+                    januszex.printAvaibleCars();
+                case 6:
                     running=false;
                     break;
                 default:
                     System.out.println("wrong number");
+
             }
         }
     }

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarRent {
-    private List<Vehicle> vehicles;
+    public List<Vehicle> vehicles;
 
     CarRent() {
         vehicles = new ArrayList<>();
@@ -32,7 +32,13 @@ public class CarRent {
   public void deleteCar(Vehicle vehicle){
     vehicle=null;
   }
-    public void printAvaibleCars(){}
+
+        public void printAvaibleCars(){
+            for (Vehicle vehicle : vehicles) {
+                if (vehicle.availability == true)
+                    System.out.println(vehicle.toString());
+            }
+    }
     public void printAllCarsFrom() {
         for (Vehicle vehicle : vehicles)
             System.out.println(vehicle.toString());

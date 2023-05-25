@@ -143,6 +143,8 @@ public class Main {
                     januszex.printAvaibleCars();
                     break;
                 case 6:
+                    januszex.deleteCar(honda);
+                case 7:
                     running=false;
                     break;
                 default:
